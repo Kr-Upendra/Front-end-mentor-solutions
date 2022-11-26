@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Kr-Upendra/Front-end-mentor-solutions/tree/main/interactive-rating-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://rating-component-local.netlify.app/)
 
 ## My process
 
