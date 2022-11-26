@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --primaryOrange: hsl(25, 97%, 53%);
+  --natWhite: hsl(0, 0%, 100%);
+  --natLightGrey: hsl(217, 12%, 63%);
+  --natMediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --darkBlue2: hsla(215, 8%, 46%, 0.158);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --paraFontSize: 15px;
+  --regularFontWeight: 400;
+  --boldFontWeight: 700;
+  --fontFamily: "Overpass", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add-font {
+  font-family: var(--fontFamily);
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--veryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--darkBlue);
+  /* width: 50%; */
+  width: 361px;
+  padding: 1.8rem;
+  border-radius: 30px;
+}
+
+.card .star {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--darkBlue2);
+  margin-bottom: 1.6rem;
+}
+
+.card h2 {
+  color: var(--natWhite);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: var(--paraFontSize);
+  color: var(--natLightGrey);
+  line-height: 1.5;
+}
+
+.rating-values {
+  display: flex;
+  margin: 1rem 0 1.5rem;
+}
+
+.rating-values button {
+  background-color: var(--darkBlue2);
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  cursor: pointer;
+  color: var(--natMediumGrey);
+  font-size: 18px;
+}
+
+button:last-child {
+  margin-right: 0px;
+}
+
+button.active {
+  color: var(--natWhite);
+  background-color: var(--natMediumGrey);
+}
+
+.rating-values button:hover {
+  background-color: var(--primaryOrange);
+  color: var(--natWhite);
+}
+
+.btn {
+  text-align: center;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  background-color: var(--primaryOrange);
+  border: none;
+  outline: none;
+  color: var(--natWhite);
+  font-weight: var(--boldFontWeight);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  color: var(--primaryOrange);
+  background-color: var(--natWhite);
+}
+
+.dp-none {
+  display: none;
+}
+
+.thankyou-page {
+  margin: 1rem 0 1rem;
+}
+
+.thankyou-page .orange-text {
+  background-color: var(--darkBlue2);
+  color: var(--primaryOrange);
+  padding: 0.5rem 1.3rem;
+  border-radius: 30px;
+  margin: 2rem 0;
+  display: block;
+  width: max-content;
+  justify-content: center;
+  margin-left: 3rem;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.4rem;
+  }
+  .thankyou-page .orange-text {
+    margin-left: 2.5rem;
+  }
+}
