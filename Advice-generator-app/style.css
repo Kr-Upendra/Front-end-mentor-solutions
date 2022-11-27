@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --fontWeight: 800;
+  --fontSize: 28px;
+  --neuGrayishBlue: hsl(217, 19%, 38%);
+  --neuDarkGrayishBlue: hsl(217, 19%, 24%);
+  --neuDarkBlue: hsl(218, 23%, 16%);
+  --primaryLightCyan: hsl(193, 38%, 86%);
+  --primaryNeonGreen: hsl(150, 100%, 66%);
+}
