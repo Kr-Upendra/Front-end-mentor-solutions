@@ -3,9 +3,105 @@
 :root {
   --fontWeight: 800;
   --fontSize: 28px;
+  --fontFamily: "Manrope", sans-serif;
   --neuGrayishBlue: hsl(217, 19%, 38%);
   --neuDarkGrayishBlue: hsl(217, 19%, 24%);
   --neuDarkBlue: hsl(218, 23%, 16%);
   --primaryLightCyan: hsl(193, 38%, 86%);
   --primaryNeonGreen: hsl(150, 100%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-color: var(--neuDarkBlue);
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fontFamily);
+}
+
+.advice-card {
+  border-radius: 1.5rem;
+  background-color: var(--neuDarkGrayishBlue);
+  padding: 2.5rem 1.5rem 3rem;
+  position: relative;
+  width: 500px;
+}
+
+.advice-card .advice-id {
+  color: var(--primaryNeonGreen);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.advice-text {
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
+  color: var(--primaryLightCyan);
+  padding: 1.5rem 0;
+}
+
+.divider-img {
+  height: 1rem;
+  background-image: url("./images//pattern-divider-desktop.svg");
+  background-position: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: -11%;
+  transform: translate(-50%, +0%);
+  width: 70px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primaryNeonGreen);
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 40px var(--primaryNeonGreen);
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .divider-img {
+    background-image: url("./images/pattern-divider-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .advice-card {
+    width: 370px;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .advice-text {
+    font-size: 23px;
+    letter-spacing: -0.01rem;
+  }
 }
