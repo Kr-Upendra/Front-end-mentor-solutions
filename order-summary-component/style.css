@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --fontFamily: "Red Hat Display", sans-serif;
+  --weight500: 500;
+  --weight700: 700;
+  --weight900: 900;
+  --bodyFontSize: 16px;
+  --neuPaleBlue: hsl(225, 100%, 98%);
+  --neuDesBlue: hsl(224, 23%, 55%);
+  --neuDarkBlue: hsl(223, 47%, 23%);
+  --primaryPaleBlue: hsl(225, 100%, 94%);
+  --shadow: rgb(224, 232, 255);
+  --primaryBrightBlue: hsl(245, 75%, 52%);
+  --borderRadius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-color: var(--shadow);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: var(--bodyFontSize);
+  font-family: var(--fontFamily);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  width: 350px;
+  border-radius: var(--borderRadius);
+  background-color: var(--neuPaleBlue);
+}
+
+.front-img img {
+  width: 100%;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}
+
+.detail-component {
+  padding: 1rem 2.3rem;
+}
+
+.text {
+  text-align: center;
+  padding: 0 0.6rem;
+  margin: 0 0 1.5rem;
+}
+
+.text h2 {
+  font-weight: var(--weight900);
+  margin: 0.3rem 0 1rem;
+  font-size: calc(var(--bodyFontSize) + 0.25rem);
+  color: var(--neuDarkBlue);
+}
+
+.text p {
+  font-size: calc(var(--bodyFontSize) - 2px);
+  line-height: 1.5;
+  color: var(--neuDesBlue);
+  font-weight: var(--weight500);
+}
+
+.order-plan {
+  display: flex;
+  padding: 0.6rem 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primaryPaleBlue);
+  border-radius: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.order-plan img {
+  width: 43px;
+}
+
+.order-type-price h4 {
+  font-size: 0.85rem;
+  font-weight: var(--weight900);
+  color: var(--neuDarkBlue);
+  margin-bottom: 0.2rem;
+}
+
+.order-type-price p {
+  font-size: 0.78rem;
+  font-weight: var(--weight700);
+  color: var(--neuDesBlue);
+}
+
+.order-plan a {
+  font-size: 0.85rem;
+  color: var(--primaryBrightBlue);
+  font-weight: var(--weight700);
+}
+
+.order-plan a:hover {
+  text-decoration: none;
+}
+
+.btns {
+  text-align: center;
+  line-height: 2.5;
+  margin-bottom: 0.2rem;
+}
+
+.btns button {
+  width: 100%;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-family: var(--fontFamily);
+  font-weight: var(--weight900);
+  color: var(--neuPaleBlue);
+  padding: 0.8rem 0;
+  border-radius: calc(var(--borderRadius) - 0.5rem);
+  outline: none;
+  border: none;
+  background-color: var(--primaryBrightBlue);
+  margin-bottom: 0.6rem;
+  box-shadow: 0px 8px 25px rgba(35, 60, 136, 0.575);
+  cursor: pointer;
+}
+
+.btns button:hover {
+  background-color: rgba(29, 46, 141, 0.767);
+}
+
+.btns a {
+  display: block;
+  color: var(--neuDesBlue);
+  text-decoration: none;
+  font-weight: var(--weight700);
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.btns a:hover {
+  color: var(--neuDarkBlue);
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    padding: 0rem 2rem;
+  }
+  .detail-component {
+    padding: 1rem 1.3rem;
+  }
+}
