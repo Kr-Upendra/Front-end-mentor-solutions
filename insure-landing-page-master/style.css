@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --dmFont: "DM Serif Display", serif;
+  --karlaFont: "Karla", sans-serif;
+  --dmFontWeight: 400;
+  --karla400: 400;
+  --karla700: 700;
+  --varyDarkViolet: hsl(270, 9%, 17%);
+  --darkGrayingViolet: hsl(273, 4%, 51%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --darkViolet: hsl(256, 26%, 20%);
+  --grayishBlue: hsl(216, 30%, 68%);
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  font-family: var(--karlaFont);
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--dmFont);
+}
+
+.section,
+.navbar,
+.footer {
+  padding: 0 10rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+}
+
+.navbar > .navigation {
+  display: flex;
+}
+
+.navigation > .list {
+  margin-left: 1.25rem;
+}
+
+.list > .links {
+  color: var(--darkGrayingViolet);
+  font-size: 0.95rem;
+  font-weight: var(--karla700);
+}
+
+.links:hover {
+  color: var(--varyDarkViolet);
+}
+
+.btn {
+  border: 2px solid var(--varyDarkViolet);
+  padding: 0.6rem 1.55rem;
+  text-transform: uppercase;
+  color: var(--varyDarkViolet) !important;
+  font-weight: var(--karla700);
+}
+
+.btn:hover {
+  color: var(--veryLightGray) !important;
+  background-color: var(--varyDarkViolet);
+}
+
+.toggle-btn {
+  display: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn[data-blue="true"] {
+  color: var(--veryLightGray);
+  border: 2px solid var(--veryLightGray);
+}
+
+.btn:hover[data-blue="true"] {
+  color: var(--veryLightGray);
+  border: 2px solid var(--veryLightGray);
+}
+
+@media (max-width: 375px) {
+  body {
+    height: 100vh;
+  }
+  .section,
+  .navbar,
+  .footer {
+    padding: 0 1.5rem;
+  }
+
+  .navigation {
+    background: url("./images/bg-pattern-mobile-nav.svg");
+    background: hsl(270, 9%, 17%);
+    position: fixed;
+    inset: 12% 0 0 0;
+    flex-direction: column;
+    padding: 4rem 0;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .list {
+    margin-bottom: 3.5rem;
+  }
+
+  .list > .links {
+    font-size: 1.45rem;
+    color: var(--veryLightGray);
+  }
+
+  .list > .btn {
+    border: 2px solid var(--veryLightGray);
+    padding: 1rem 6rem;
+    color: var(--veryLightGray) !important;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .toggle-btn img {
+    width: 40px;
+  }
+}
